@@ -1,4 +1,3 @@
-import { Home, Order } from "./loadable";
 export interface INavList {
   type?: (type: any) => void;
   link: string;
@@ -8,17 +7,20 @@ export interface INavList {
 
 export type INavLists = INavList[];
 
+/**
+ * 顶部路由菜单
+ */
 export const NavList: INavLists = [
   {
-    name: "个性推荐",
-    link: "/home",
-    key: "home",
+    name: '个性推荐',
+    link: '/home',
+    key: 'home'
   },
   {
-    name: "专属订制",
-    link: "/order",
-    key: "order",
-  },
+    name: '专属订制',
+    link: '/order',
+    key: 'order'
+  }
   // {
   //   name: "歌单",
   //   link: "/home",
@@ -41,30 +43,33 @@ export const NavList: INavLists = [
   // },
 ];
 
+/**
+ * 左侧路由菜单
+ */
 export const AsideNav: INavLists = [
   {
-    name: "发现音乐",
-    link: "/home",
-    key: "found_music",
+    name: '发现音乐',
+    link: '/home',
+    key: 'found_music'
   },
   {
-    name: "博客",
-    link: "/blog",
-    key: "blog",
+    name: '博客',
+    link: '/blog',
+    key: 'blog'
   },
   {
-    name: "关注",
-    link: "/focus",
-    key: "focus",
+    name: '关注',
+    link: '/focus',
+    key: 'focus'
   },
   {
-    name: "直播",
-    link: "/live",
-    key: "live",
+    name: '直播',
+    link: '/live',
+    key: 'live'
   },
   {
-    name: "私人FM",
-    link: "/privatefm",
-    key: "privatefm",
-  },
+    name: '私人FM',
+    link: '/privatefm',
+    key: 'privatefm'
+  }
 ];

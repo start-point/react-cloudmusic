@@ -1,5 +1,5 @@
-import Message from "./Message";
-import { NoticeType } from "./Notice";
+import Message from './Message';
+import { NoticeType } from './Notice';
 
 const notice = (
   type: NoticeType,
@@ -11,7 +11,7 @@ const notice = (
     type,
     text,
     duration,
-    onClose,
+    onClose
   });
 };
 
@@ -20,11 +20,7 @@ const fn = {
     return notice(NoticeType.INFO, text, duration, onClose);
   },
 
-  success(
-    text: string | number,
-    duration: number = 3000,
-    onClose?: () => void
-  ) {
+  success(text: string | number, duration: number = 3000, onClose?: () => void) {
     return notice(NoticeType.SUCCESS, text, duration, onClose);
   },
 
@@ -32,21 +28,13 @@ const fn = {
     return notice(NoticeType.ERROR, text, duration, onClose);
   },
 
-  warning(
-    text: string | number,
-    duration: number = 3000,
-    onClose?: () => void
-  ) {
+  warning(text: string | number, duration: number = 3000, onClose?: () => void) {
     return notice(NoticeType.WARNING, text, duration, onClose);
   },
 
-  default(
-    text: string | number,
-    duration: number = 3000,
-    onClose?: () => void
-  ) {
+  default(text: string | number, duration: number = 3000, onClose?: () => void) {
     return notice(NoticeType.DEFAULT, text, duration, onClose);
-  },
+  }
 };
 
 export default fn;

@@ -1,11 +1,11 @@
-import { TITLE, TITLE_ENTRY, TITLE_OUT } from "./../config/constance";
+import { TITLE, TITLE_ENTRY, TITLE_OUT } from './../config/constance';
 class EventClass {
   private t: any = null;
   public addVisiblityChange() {
     const self = this;
     const onVisibilityChange = function () {
       clearTimeout(self.t);
-      if (!document["hidden"]) {
+      if (!document['hidden']) {
         document.title = TITLE_ENTRY;
         self.t = setTimeout(() => {
           document.title = TITLE;
@@ -14,7 +14,7 @@ class EventClass {
         document.title = TITLE_OUT;
       }
     };
-    document.addEventListener("visibilitychange", onVisibilityChange);
+    document.addEventListener('visibilitychange', onVisibilityChange);
   }
 }
 

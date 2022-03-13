@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 interface IuseLoadingTips {
   /** 是否显示 提示信息 */
@@ -20,7 +20,7 @@ interface IuseLoadingTips {
  */
 export const useLoadingTips = (
   state: boolean = false,
-  text: string = "loading..."
+  text: string = 'loading...'
 ): IuseLoadingTips => {
   const [loading, setLoading] = useState(state);
   const [loadingText, setLoadingText] = useState(text);
@@ -38,6 +38,6 @@ export const useLoadingTips = (
     loading,
     text: loadingText,
     showLoading,
-    hideLoading,
+    hideLoading
   };
 };

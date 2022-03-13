@@ -1,12 +1,12 @@
-import "./nav.less";
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { INavList } from "@/config/nav";
-import classNames from "classnames";
-import { PROJECT_NAME, WEBSITE_TITLE } from "@/config/constance";
-import { observer } from "mobx-react-lite";
-import { useStore } from "@/hooks/use";
-import { CopyRight } from "@/components/CopyRight";
+import './nav.less';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { INavList } from '@/config/nav';
+import classNames from 'classnames';
+import { PROJECT_NAME, WEBSITE_TITLE } from '@/config/constance';
+import { observer } from 'mobx-react-lite';
+import { useStore } from '@/hooks/use';
+import { CopyRight } from '@/components/CopyRight';
 interface INavProps {
   location?: any;
 }
@@ -20,7 +20,7 @@ const Nav = observer((props: INavProps) => {
   const asidelists = nav.asidelists;
 
   const classString = classNames({
-    [`${PROJECT_NAME}-nav`]: true,
+    [`${PROJECT_NAME}-nav`]: true
   });
 
   return (

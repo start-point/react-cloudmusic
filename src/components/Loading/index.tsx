@@ -1,5 +1,5 @@
-import React from "react";
-import "./loading.less";
+import React from 'react';
+import './loading.less';
 
 interface ILoadingProps {
   tip?: string;

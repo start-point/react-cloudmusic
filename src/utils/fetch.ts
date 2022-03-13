@@ -1,9 +1,9 @@
-import "whatwg-fetch";
-import { stringifyUrl } from "d-utils/lib/urlUtils";
-import LogUtils from "d-utils/lib/logUtils";
-import * as qs from "qs";
-import Notice from "@/components/Notice";
-import { isProduction } from "./utils";
+import 'whatwg-fetch';
+import { stringifyUrl } from 'd-utils/lib/urlUtils';
+import LogUtils from 'd-utils/lib/logUtils';
+import * as qs from 'qs';
+import Notice from '@/components/Notice';
+import { isProduction } from './utils';
 
 export const controller = new AbortController();
 export const Http = {
@@ -17,16 +17,15 @@ export const Http = {
     const signal = controller.signal;
     return new Promise((resolve, reject) => {
       fetch(newUrl, {
-        mode: "cors",
+        mode: 'cors',
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        signal,
+        signal
       })
         .then((res) => res.json())
         .then((data) => {
-          !isProduction() &&
-            LogUtils.logInfo(data, `http-request: url: ${url} => `);
+          !isProduction() && LogUtils.logInfo(data, `http-request: url: ${url} => `);
           if (parseInt(data.code, 10) === 200 || data.success) {
             resolve(data);
             return;
@@ -35,14 +34,16 @@ export const Http = {
           const msg = data.message ? data.message : data.msg;
           !isProduction() && LogUtils.logError(msg);
           Notice.error(msg);
-          reject(msg);
+          // reject(msg);
         })
         .catch((err: any) => {
-          if (err.name === "AbortError") {
+          if (err.name === 'AbortError') {
+            Notice.error(`request was aborted${err}`);
             reject(`request was aborted${err}`);
             return;
           }
           !isProduction() && LogUtils.logError(err);
+          Notice.error(`请求未知错误${err}`);
           reject(`请求未知错误${err}`);
         });
     });
@@ -58,13 +59,13 @@ export const Http = {
     return new Promise((resolve, reject) => {
       const signal = controller.signal;
       fetch(url, {
-        method: "POST",
+        method: 'POST',
         // mode: 'cors',
         body: qs.stringify(data),
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
-        signal,
+        signal
       })
         .then((res) => res.json())
         .then((response) => {
@@ -78,13 +79,15 @@ export const Http = {
           reject(msg);
         })
         .catch((err) => {
-          if (err.name === "AbortError") {
+          if (err.name === 'AbortError') {
+            Notice.error(`request was aborted${err}`);
             reject(`request was aborted${err}`);
             return;
           }
           !isProduction() && LogUtils.logError(err);
+          Notice.error(`请求未知错误${err}`);
           reject(`请求未知错误${err}`);
         });
     });
-  },
+  }
 };

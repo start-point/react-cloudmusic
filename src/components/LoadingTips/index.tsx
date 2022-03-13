@@ -1,7 +1,7 @@
-import React from "react";
-import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
-import "./loading-tips.less";
+import React from 'react';
+import classNames from 'classnames';
+import { PROJECT_NAME } from '@/config/constance';
+import './loading-tips.less';
 
 interface ILoadingTips {
   show?: boolean;
@@ -11,9 +11,8 @@ interface ILoadingTips {
 const LoadingTips = (props: ILoadingTips) => {
   const classString = classNames({
     [`${PROJECT_NAME}-comp-loading-tips`]: true,
-    ["loading-tips-active"]: props.show,
+    ['loading-tips-active']: props.show
   });
-  console.log(props);
 
   return (
     <div className={classString}>
@@ -24,7 +23,7 @@ const LoadingTips = (props: ILoadingTips) => {
 
 LoadingTips.defaultProps = {
   show: false,
-  text: "加载中...",
+  text: '加载中...'
 };
 
 export default LoadingTips;

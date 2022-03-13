@@ -1,11 +1,10 @@
-import React from "react";
-import "./recommend.less";
+import React from 'react';
+import './recommend.less';
 interface ILoadingTips {
   personalized: any[] | undefined;
 }
 
 const RecommendCard = (props: ILoadingTips) => {
-  console.log(props.personalized, "personalized..");
   return (
     <div className="recommend-wrap">
       {props.personalized &&

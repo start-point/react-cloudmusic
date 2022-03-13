@@ -1,14 +1,13 @@
-import React from "react";
-import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
-type Props = {};
+import React from 'react';
+import classNames from 'classnames';
+import { PROJECT_NAME } from '@/config/constance';
 
-const index = (props: Props) => {
+const Blog = () => {
   const classString = classNames({
     [`${PROJECT_NAME}-blog`]: true,
-    [`liziyuan-page-router`]: true,
+    [`liziyuan-page-router`]: true
   });
   return <div className={classString}>blog 正在开发中...</div>;
 };
 
-export default index;
+export default Blog;

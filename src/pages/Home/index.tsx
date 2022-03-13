@@ -1,10 +1,10 @@
-import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
-import React, { useEffect, useState } from "react";
-import { SlideShow } from "@/components/SlideShow";
-import { observer } from "mobx-react-lite";
-import { getSheetLists } from "@/server";
-import RecommendList from "./recommendList";
+import classNames from 'classnames';
+import { PROJECT_NAME } from '@/config/constance';
+import React, { useEffect, useState } from 'react';
+import { SlideShow } from '@/components/SlideShow';
+import { observer } from 'mobx-react-lite';
+import { getSheetLists } from '@/server';
+import RecommendList from './recommendList';
 interface IHomeProps {}
 
 /**
@@ -26,7 +26,7 @@ const Home = observer((props: IHomeProps) => {
 
   const classString = classNames({
     [`${PROJECT_NAME}-home`]: true,
-    [`liziyuan-page-router`]: true,
+    [`liziyuan-page-router`]: true
   });
   return (
     <div className={classString}>

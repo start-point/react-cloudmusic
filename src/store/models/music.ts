@@ -1,5 +1,5 @@
-import { observable, action, runInAction } from "mobx";
-import { getSheetLists } from "@/server";
+import { observable, action, runInAction } from 'mobx';
+import { getSheetLists } from '@/server';
 export default class MusicStore {
   @observable
   MusicBanner: any[] = [];

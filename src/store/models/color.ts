@@ -1,8 +1,8 @@
-import { observable, action } from "mobx";
+import { observable, action } from 'mobx';
 
 export default class ColorModel {
   @observable
-  mode: string = "light";
+  mode: string = 'light';
 
   @action
   changeMode(mode?: string) {
@@ -10,6 +10,6 @@ export default class ColorModel {
       this.mode = mode;
       return;
     }
-    this.mode = this.mode === "light" ? "dark" : "light";
+    this.mode = this.mode === 'light' ? 'dark' : 'light';
   }
 }
