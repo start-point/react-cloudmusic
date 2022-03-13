@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Api } from "@/api";
 import LoadingTips from "@/components/LoadingTips";
@@ -11,7 +11,7 @@ import { Http } from "@/utils/fetch";
  * @param props
  * @returns
  */
-const RecommendList = () => {
+const RecommendList = (props) => {
   const [personalized, setPersonalized] = useState<any[]>();
   const loadingTips = useLoadingTips(false, "歌单加载中...");
   useEffect(() => {

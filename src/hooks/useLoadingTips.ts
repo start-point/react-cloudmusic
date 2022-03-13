@@ -8,7 +8,7 @@ interface IuseLoadingTips {
   text: string;
 
   /** 显示LoadingTips 可以设置文字 可选 */
-  showLoading?: (text?: string) => void;
+  showLoading: (text?: string) => void;
 
   /** 关闭 */
   hideLoading(): void;
