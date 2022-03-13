@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 
 import { Api } from "@/api";
 import LoadingTips from "@/components/LoadingTips";
