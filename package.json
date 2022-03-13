@@ -10,7 +10,7 @@
     "analyz": "NODE_ENV=production npm_config_report=true npm run build",
     "lint": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}'",
     "lint_fix": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}' --fix",
-    "commit": "cz"
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "liziyuan",
@@ -66,7 +66,7 @@
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.4",
     "url-loader": "^1.0.1",
-    "webpack": "5",
+    "webpack": "^5.70.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": ">=3.1.11",
     "webpack-merge": "^4.2.1"
@@ -77,6 +77,7 @@
     "d-utils": "^3.0.2",
     "eslint-webpack-plugin": "^3.1.1",
     "highlight.js": "^9.15.10",
+    "husky": "^7.0.4",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.14",
     "marked": "^0.7.0",
@@ -86,13 +87,5 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "whatwg-fetch": "^3.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/*.{js,jsx,mjs,ts,tsx}": "eslint"
   }
 }
