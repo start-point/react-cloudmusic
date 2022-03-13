@@ -1,12 +1,14 @@
+import "./style/index.less";
+
+import LogUtils from "d-utils/lib/logUtils";
+import PF from "d-utils/lib/performanceUtils";
 import React from "react";
 import ReactDOM from "react-dom";
+
 import App from "./App";
-import "./style/index.less";
-import { initPageMode } from "./utils/utils";
+import { CONSOLE_BGS, CONSOLE_TEXT } from "./config/constance";
 import selfEvent from "./utils/event";
-import PF from "d-utils/lib/performanceUtils";
-import LogUtils from "d-utils/lib/logUtils";
-import { CONSOLE_TEXT, CONSOLE_BGS } from "./config/constance";
+import { initPageMode } from "./utils/utils";
 
 PF.logger();
 /**

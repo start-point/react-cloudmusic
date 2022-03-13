@@ -1,16 +1,17 @@
-import React from "react";
 import "./loading.less";
 
-interface ILoadingProps {
-  tip?: string;
-  isLoading: boolean;
-  pastDelay: boolean;
-  timedOut: boolean;
-  error: any;
-  retry: () => void;
-}
+import React from "react";
 
-const Loading = (props: ILoadingProps) => {
+// interface ILoadingProps {
+//   tip?: string;
+//   isLoading: boolean;
+//   pastDelay: boolean;
+//   timedOut: boolean;
+//   error: any;
+//   retry: () => void;
+// }
+
+const Loading = () => {
   return <div className="loadable-loading">loading ...</div>;
 };
 

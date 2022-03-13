@@ -8,7 +8,7 @@ import { useEffect } from "react";
  */
 export default function useScroll(ref: any, requestCallBack: () => void, t: number = 3000) {
   if (!ref) return;
-  const eventHandler = (e: any) => {
+  const eventHandler = () => {
     const newRef = ref.current ? ref.current : ref;
     if (newRef.clientHeight + newRef.scrollTop === newRef.scrollHeight) {
       callBack();

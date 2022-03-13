@@ -1,16 +1,18 @@
-import React from "react";
-import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
 import "./notice.less";
+
+import classNames from "classnames";
 import { observer } from "mobx-react-lite";
+import React from "react";
+
+import { PROJECT_NAME } from "@/config/constance";
 import store from "@/store";
 
 export enum NoticeType {
-  INFO = "info",
-  SUCCESS = "success",
-  ERROR = "error",
-  WARNING = "warning",
-  DEFAULT = "default"
+  "INFO" = "info",
+  "SUCCESS" = "success",
+  "ERROR" = "error",
+  "WARNING" = "warning",
+  "DEFAULT" = "default"
 }
 
 export interface INoticeProps {
@@ -21,7 +23,6 @@ export interface INoticeProps {
 const Notice: React.FC<INoticeProps> = observer((props) => {
   const { mode } = store.colorStore;
   const { type, text } = props;
-  const theme = localStorage.getItem;
   const classString = classNames({
     [`${PROJECT_NAME}-comp-notice`]: true,
     [`notice-${type}`]: true,

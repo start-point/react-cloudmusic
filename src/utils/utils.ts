@@ -1,4 +1,5 @@
 import { hasClass } from "d-utils/lib/domUtils";
+
 import store from "@/store";
 
 /**

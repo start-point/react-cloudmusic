@@ -1,6 +1,6 @@
 import ColorModel from "./models/color";
-import NavModel from "./models/nav";
 import Music from "./models/music";
+import NavModel from "./models/nav";
 
 const store: any = {
   colorStore: new ColorModel(),

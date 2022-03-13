@@ -1,9 +1,9 @@
-import React from "react";
 import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
-type Props = {};
+import React from "react";
 
-const Order = ({}: Props) => {
+import { PROJECT_NAME } from "@/config/constance";
+
+const Order = () => {
   const classString = classNames({
     [`${PROJECT_NAME}-order`]: true,
     [`liziyuan-page-router`]: true

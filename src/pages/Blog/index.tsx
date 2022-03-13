@@ -1,5 +1,6 @@
-import React from "react";
 import classNames from "classnames";
+import React from "react";
+
 import { PROJECT_NAME } from "@/config/constance";
 
 const Blog = () => {

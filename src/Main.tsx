@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import { Home, Order, Blog } from "./config/loadable";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+
 import Nav from "./components/Nav/index";
 import Notice from "./components/Notice";
 import { TIP_INFO } from "./config/constance";
-interface IMainProps {
-  prefixClass?: string;
-  history?: any;
-}
+import { Blog, Home, Order } from "./config/loadable";
+// interface IMainProps {
+//   prefixClass?: string;
+//   history?: any;
+// }
 
-const Main = (props: IMainProps) => {
+const Main = () => {
   useEffect(() => {
     Notice.default(TIP_INFO.FIRST_INFO);
   });

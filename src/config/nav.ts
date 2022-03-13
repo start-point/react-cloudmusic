@@ -1,5 +1,4 @@
 export interface INavList {
-  type?: (type: any) => void;
   link: string;
   name: string;
   key: string;

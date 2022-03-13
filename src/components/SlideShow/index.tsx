@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
 import "./slideshow.less";
+
+import React, { useEffect, useRef, useState } from "react";
 
 const SlideShow = (props: any) => {
   const clsRef = useRef(["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8"]);
@@ -32,8 +33,8 @@ const SlideShow = (props: any) => {
         {props.bannerList &&
           props.bannerList.map((v: any, i: number) => {
             return (
-              <li className={cls[i]}>
-                <img src={v.imageUrl} />
+              <li className={cls[i]} key={v + i}>
+                <img src={v.imageUrl} alt="图片暂无" />
               </li>
             );
           })}

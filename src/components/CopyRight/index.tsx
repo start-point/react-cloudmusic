@@ -1,8 +1,10 @@
-import React from "react";
-import { PROJECT_NAME } from "@/config/constance";
+import "./copy_right.less";
+
 import classNames from "classnames";
 import { formatDate } from "d-utils/lib/genericUtils";
-import "./copy_right.less";
+import React from "react";
+
+import { PROJECT_NAME } from "@/config/constance";
 // import { Link } from 'react-router-dom';
 
 const CopyRight: React.FC = () => {

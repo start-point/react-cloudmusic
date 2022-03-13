@@ -1,8 +1,11 @@
 import "whatwg-fetch";
-import { stringifyUrl } from "d-utils/lib/urlUtils";
+
 import LogUtils from "d-utils/lib/logUtils";
+import { stringifyUrl } from "d-utils/lib/urlUtils";
 import * as qs from "qs";
+
 import Notice from "@/components/Notice";
+
 import { isProduction } from "./utils";
 
 export const controller = new AbortController();
@@ -10,9 +13,9 @@ export const Http = {
   /**
    * get 请求
    * @param {*} url 请求地址
-   * @param {*} _showMessage 是否显示成功的提示
+   * @param {*} _showMessage = false 是否显示成功的提示
    */
-  get: function (url: string, data: any = {}, _showMessage: boolean = false) {
+  get: function (url: string, data: any = {}) {
     const newUrl = `${url}?${stringifyUrl(data)}`;
     const signal = controller.signal;
     return new Promise((resolve, reject) => {
@@ -53,9 +56,9 @@ export const Http = {
    * post 请求
    * @param {*} url 请求地址
    * @param {*} data 请求的参数
-   * @param {*} _showMessage 是否显示成功的提示
+   * @param {*}  _showMessage = false 是否显示成功的提示
    */
-  post: function (url: string, data: any, _showMessage = false) {
+  post: function (url: string, data: any) {
     return new Promise((resolve, reject) => {
       const signal = controller.signal;
       fetch(url, {

@@ -1,18 +1,19 @@
 import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
-import React, { useEffect, useState } from "react";
-import { SlideShow } from "@/components/SlideShow";
 import { observer } from "mobx-react-lite";
+import React, { useEffect, useState } from "react";
+
+import { SlideShow } from "@/components/SlideShow";
+import { PROJECT_NAME } from "@/config/constance";
 import { getSheetLists } from "@/server";
+
 import RecommendList from "./recommendList";
-interface IHomeProps {}
 
 /**
  * 首页 组件
  * @param props
  * @returns
  */
-const Home = observer((props: IHomeProps) => {
+const Home = observer(() => {
   const [bannerList, setBannerList] = useState<[]>();
   useEffect(() => {
     const list = async () => {

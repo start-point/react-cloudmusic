@@ -1,7 +1,9 @@
-import React from "react";
-import classNames from "classnames";
-import { PROJECT_NAME } from "@/config/constance";
 import "./loading-tips.less";
+
+import classNames from "classnames";
+import React from "react";
+
+import { PROJECT_NAME } from "@/config/constance";
 
 interface ILoadingTips {
   show?: boolean;

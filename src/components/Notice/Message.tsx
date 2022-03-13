@@ -1,10 +1,13 @@
-import React, { useState, useImperativeHandle } from "react";
-import classNames from "classnames";
-import ReactDOM from "react-dom";
-import { PROJECT_NAME } from "@/config/constance";
-import Notice, { NoticeType } from "./Notice";
 import "./message.less";
+
+import classNames from "classnames";
+import React, { useImperativeHandle, useState } from "react";
+import ReactDOM from "react-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+import { PROJECT_NAME } from "@/config/constance";
+
+import Notice, { NoticeType } from "./Notice";
 
 export interface IMessageState {
   type: NoticeType;
@@ -16,14 +19,13 @@ export interface IMessageState {
 }
 
 export interface IMessageQueueState {
-  addMessage(message: IMessageState): void;
+  addMessage?: (message: IMessageState) => void;
 }
 
 export interface IMessageQueueProps {}
 
 const MessageQueue: React.FC<IMessageQueueProps> = (props, ref) => {
   let noticeId = 0;
-  const transitionTime: number = 300;
   const [messageQueue, setMessageQueue] = useState<IMessageState[]>([]);
 
   const messageInclude = (message: IMessageState): boolean => {

@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+
 import { storeContext } from "./hooks/use";
-import store from "./store";
 import Main from "./Main";
+import store from "./store";
 
 const App = () => {
   return (

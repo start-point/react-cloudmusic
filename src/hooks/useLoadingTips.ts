@@ -8,7 +8,7 @@ interface IuseLoadingTips {
   text: string;
 
   /** 显示LoadingTips 可以设置文字 可选 */
-  showLoading(text?: string): void;
+  showLoading?: (text?: string) => void;
 
   /** 关闭 */
   hideLoading(): void;
@@ -26,12 +26,12 @@ export const useLoadingTips = (
   const [loadingText, setLoadingText] = useState(text);
 
   function showLoading(text?: string) {
-    setLoading((loading) => (loading = true));
-    text && setLoadingText((loadingText) => (loadingText = text));
+    setLoading((_loading) => (_loading = true));
+    text && setLoadingText((_loadingText) => (_loadingText = text));
   }
 
   function hideLoading() {
-    setLoading((loading) => (loading = false));
+    setLoading((__loading) => (__loading = false));
   }
 
   return {

@@ -1,20 +1,22 @@
 import "./nav.less";
+
+import classNames from "classnames";
+import { observer } from "mobx-react-lite";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { INavList } from "@/config/nav";
-import classNames from "classnames";
-import { PROJECT_NAME, WEBSITE_TITLE } from "@/config/constance";
-import { observer } from "mobx-react-lite";
-import { useStore } from "@/hooks/use";
+
 import { CopyRight } from "@/components/CopyRight";
-interface INavProps {
-  location?: any;
-}
+import { PROJECT_NAME, WEBSITE_TITLE } from "@/config/constance";
+import { INavList } from "@/config/nav";
+import { useStore } from "@/hooks/use";
+// interface INavProps {
+//   location?: any;
+// }
 
 /**
  * 顶部/侧边栏 组件
  */
-const Nav = observer((props: INavProps) => {
+const Nav = observer(() => {
   const nav = useStore().navStore;
   const lists = nav.lists;
   const asidelists = nav.asidelists;
@@ -34,7 +36,7 @@ const Nav = observer((props: INavProps) => {
           </div>
         </div>
         <div className="nav-lists">
-          {lists.slice().map((item: INavList, index: number) => {
+          {lists.slice().map((item: INavList) => {
             return (
               <NavLink
                 className="nav-list"
@@ -49,7 +51,7 @@ const Nav = observer((props: INavProps) => {
         </div>
       </nav>
       <div className="nav-aside">
-        {asidelists.slice().map((item: INavList, index: number) => {
+        {asidelists.slice().map((item: INavList) => {
           return (
             <NavLink
               className="nav-aside-list"

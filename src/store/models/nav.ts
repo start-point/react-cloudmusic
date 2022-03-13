@@ -1,5 +1,6 @@
-import { observable, action } from "mobx";
-import { INavLists, AsideNav, NavList } from "@/config/nav"; //MusicNav
+import { action, observable } from "mobx";
+
+import { AsideNav, INavLists, NavList } from "@/config/nav"; //MusicNav
 export default class ColorModel {
   @observable
   lists: INavLists = NavList;
