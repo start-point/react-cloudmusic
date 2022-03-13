@@ -9,7 +9,8 @@
     "watch": "webpack --colors --watch",
     "analyz": "NODE_ENV=production npm_config_report=true npm run build",
     "lint": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}'",
-    "lint_fix": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}' --fix"
+    "lint_fix": "eslint '{components,example}/**/*.{ts,tsx,js,jsx}' --fix",
+    "commit": "cz"
   },
   "keywords": [],
   "author": "liziyuan",
@@ -85,5 +86,13 @@
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "whatwg-fetch": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.{js,jsx,mjs,ts,tsx}": "eslint"
   }
 }

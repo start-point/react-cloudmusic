@@ -10,9 +10,9 @@ export const Http = {
   /**
    * get 请求
    * @param {*} url 请求地址
-   * @param {*} showMessage 是否显示成功的提示
+   * @param {*} _showMessage 是否显示成功的提示
    */
-  get: function (url: string, data: any = {}, showMessage: boolean = false) {
+  get: function (url: string, data: any = {}, _showMessage: boolean = false) {
     const newUrl = `${url}?${stringifyUrl(data)}`;
     const signal = controller.signal;
     return new Promise((resolve, reject) => {
@@ -53,9 +53,9 @@ export const Http = {
    * post 请求
    * @param {*} url 请求地址
    * @param {*} data 请求的参数
-   * @param {*} showMessage 是否显示成功的提示
+   * @param {*} _showMessage 是否显示成功的提示
    */
-  post: function (url: string, data: any, showMessage = false) {
+  post: function (url: string, data: any, _showMessage = false) {
     return new Promise((resolve, reject) => {
       const signal = controller.signal;
       fetch(url, {

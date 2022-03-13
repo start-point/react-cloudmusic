@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { PROJECT_NAME } from "@/config/constance";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { SlideShow } from "@/components/SlideShow";
 import { observer } from "mobx-react-lite";
 import { getSheetLists } from "@/server";
@@ -32,6 +32,7 @@ const Home = observer((props: IHomeProps) => {
     <div className={classString}>
       <SlideShow bannerList={bannerList} />
       <RecommendList />
+      <div className="asfsafsa" />
     </div>
   );
 });
