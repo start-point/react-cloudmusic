@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { PROJECT_NAME } from "@/config/constance";
-import React, { useEffect, useState, memo } from "react";
+import React, { useEffect, useState } from "react";
 import { SlideShow } from "@/components/SlideShow";
 import { observer } from "mobx-react-lite";
 import { getSheetLists } from "@/server";
