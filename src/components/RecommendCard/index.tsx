@@ -1,5 +1,5 @@
-import React from 'react';
-import './recommend.less';
+import React from "react";
+import "./recommend.less";
 interface ILoadingTips {
   personalized: any[] | undefined;
 }

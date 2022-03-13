@@ -1,5 +1,5 @@
-import { Http } from '@/utils/fetch';
-import { Api } from '@/api';
+import { Http } from "@/utils/fetch";
+import { Api } from "@/api";
 // 歌单信息
 export const getSheetLists = async () => {
   const data = await Http.get(Api.MUSIC.MUSIC_BANNER);

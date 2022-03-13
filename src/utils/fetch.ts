@@ -1,9 +1,9 @@
-import 'whatwg-fetch';
-import { stringifyUrl } from 'd-utils/lib/urlUtils';
-import LogUtils from 'd-utils/lib/logUtils';
-import * as qs from 'qs';
-import Notice from '@/components/Notice';
-import { isProduction } from './utils';
+import "whatwg-fetch";
+import { stringifyUrl } from "d-utils/lib/urlUtils";
+import LogUtils from "d-utils/lib/logUtils";
+import * as qs from "qs";
+import Notice from "@/components/Notice";
+import { isProduction } from "./utils";
 
 export const controller = new AbortController();
 export const Http = {
@@ -17,9 +17,9 @@ export const Http = {
     const signal = controller.signal;
     return new Promise((resolve, reject) => {
       fetch(newUrl, {
-        mode: 'cors',
+        mode: "cors",
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          "Content-Type": "application/x-www-form-urlencoded"
         },
         signal
       })
@@ -37,7 +37,7 @@ export const Http = {
           // reject(msg);
         })
         .catch((err: any) => {
-          if (err.name === 'AbortError') {
+          if (err.name === "AbortError") {
             Notice.error(`request was aborted${err}`);
             reject(`request was aborted${err}`);
             return;
@@ -59,11 +59,11 @@ export const Http = {
     return new Promise((resolve, reject) => {
       const signal = controller.signal;
       fetch(url, {
-        method: 'POST',
+        method: "POST",
         // mode: 'cors',
         body: qs.stringify(data),
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          "Content-Type": "application/x-www-form-urlencoded"
         },
         signal
       })
@@ -79,7 +79,7 @@ export const Http = {
           reject(msg);
         })
         .catch((err) => {
-          if (err.name === 'AbortError') {
+          if (err.name === "AbortError") {
             Notice.error(`request was aborted${err}`);
             reject(`request was aborted${err}`);
             return;

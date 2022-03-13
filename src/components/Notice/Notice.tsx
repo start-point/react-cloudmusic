@@ -1,16 +1,16 @@
-import React from 'react';
-import classNames from 'classnames';
-import { PROJECT_NAME } from '@/config/constance';
-import './notice.less';
-import { observer } from 'mobx-react-lite';
-import store from '@/store';
+import React from "react";
+import classNames from "classnames";
+import { PROJECT_NAME } from "@/config/constance";
+import "./notice.less";
+import { observer } from "mobx-react-lite";
+import store from "@/store";
 
 export enum NoticeType {
-  INFO = 'info',
-  SUCCESS = 'success',
-  ERROR = 'error',
-  WARNING = 'warning',
-  DEFAULT = 'default'
+  INFO = "info",
+  SUCCESS = "success",
+  ERROR = "error",
+  WARNING = "warning",
+  DEFAULT = "default"
 }
 
 export interface INoticeProps {

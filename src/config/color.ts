@@ -1,11 +1,11 @@
-import { StorageKeys } from './storage';
+import { StorageKeys } from "./storage";
 
 export interface IColorInfo {
   primaryColor: string;
 }
 
 export const selfColor: IColorInfo = {
-  primaryColor: 'blue'
+  primaryColor: "blue"
 };
 
 export const getNewSelfColor = (): any => {

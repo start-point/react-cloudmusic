@@ -1,5 +1,5 @@
-import { debounce } from 'd-utils/lib/genericUtils';
-import { useEffect } from 'react';
+import { debounce } from "d-utils/lib/genericUtils";
+import { useEffect } from "react";
 
 /**
  * 滚动监听
@@ -19,10 +19,10 @@ export default function useScroll(ref: any, requestCallBack: () => void, t: numb
 
   useEffect(() => {
     const newRef = ref.current ? ref.current : ref;
-    newRef.addEventListener('scroll', eventHandler);
+    newRef.addEventListener("scroll", eventHandler);
 
     return () => {
-      newRef.removeEventListener('scroll', eventHandler);
+      newRef.removeEventListener("scroll", eventHandler);
     };
   }, []);
 }

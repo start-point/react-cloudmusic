@@ -1,6 +1,6 @@
-import React from 'react';
-import classNames from 'classnames';
-import { PROJECT_NAME } from '@/config/constance';
+import React from "react";
+import classNames from "classnames";
+import { PROJECT_NAME } from "@/config/constance";
 type Props = {};
 
 const Order = ({}: Props) => {

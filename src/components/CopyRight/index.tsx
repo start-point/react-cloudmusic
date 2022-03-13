@@ -1,8 +1,8 @@
-import React from 'react';
-import { PROJECT_NAME } from '@/config/constance';
-import classNames from 'classnames';
-import { formatDate } from 'd-utils/lib/genericUtils';
-import './copy_right.less';
+import React from "react";
+import { PROJECT_NAME } from "@/config/constance";
+import classNames from "classnames";
+import { formatDate } from "d-utils/lib/genericUtils";
+import "./copy_right.less";
 // import { Link } from 'react-router-dom';
 
 const CopyRight: React.FC = () => {
@@ -13,7 +13,7 @@ const CopyRight: React.FC = () => {
   return (
     <div className={classString}>
       <span className={`${classString}-info list`}>
-        © 2022 - {formatDate('yyyy', new Date())} from 李子园ye
+        © 2022 - {formatDate("yyyy", new Date())} from 李子园ye
       </span>
       {/* <span className="list split"> | </span> */}
     </div>

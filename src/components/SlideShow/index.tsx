@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
-import './slideshow.less';
+import React, { useEffect, useState, useRef } from "react";
+import "./slideshow.less";
 
 const SlideShow = (props: any) => {
-  const clsRef = useRef(['img1', 'img2', 'img3', 'img4', 'img5', 'img6', 'img7', 'img8']);
-  const dotsRef = useRef(['change', '', '', '', '', '', '', '']);
+  const clsRef = useRef(["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8"]);
+  const dotsRef = useRef(["change", "", "", "", "", "", "", ""]);
 
-  const [dots, setDots] = useState(['']);
-  const [cls, setCls] = useState(['']);
+  const [dots, setDots] = useState([""]);
+  const [cls, setCls] = useState([""]);
 
   useEffect(() => {
     setCls([...clsRef.current]);

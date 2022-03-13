@@ -12,14 +12,14 @@ export type INavLists = INavList[];
  */
 export const NavList: INavLists = [
   {
-    name: '个性推荐',
-    link: '/home',
-    key: 'home'
+    name: "个性推荐",
+    link: "/home",
+    key: "home"
   },
   {
-    name: '专属订制',
-    link: '/order',
-    key: 'order'
+    name: "专属订制",
+    link: "/order",
+    key: "order"
   }
   // {
   //   name: "歌单",
@@ -48,28 +48,28 @@ export const NavList: INavLists = [
  */
 export const AsideNav: INavLists = [
   {
-    name: '发现音乐',
-    link: '/home',
-    key: 'found_music'
+    name: "发现音乐",
+    link: "/home",
+    key: "found_music"
   },
   {
-    name: '博客',
-    link: '/blog',
-    key: 'blog'
+    name: "博客",
+    link: "/blog",
+    key: "blog"
   },
   {
-    name: '关注',
-    link: '/focus',
-    key: 'focus'
+    name: "关注",
+    link: "/focus",
+    key: "focus"
   },
   {
-    name: '直播',
-    link: '/live',
-    key: 'live'
+    name: "直播",
+    link: "/live",
+    key: "live"
   },
   {
-    name: '私人FM',
-    link: '/privatefm',
-    key: 'privatefm'
+    name: "私人FM",
+    link: "/privatefm",
+    key: "privatefm"
   }
 ];

@@ -1,5 +1,5 @@
-import Message from './Message';
-import { NoticeType } from './Notice';
+import Message from "./Message";
+import { NoticeType } from "./Notice";
 
 const notice = (
   type: NoticeType,

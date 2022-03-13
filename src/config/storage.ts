@@ -1,3 +1,3 @@
 export const StorageKeys = {
-  color: 'react_website_color'
+  color: "react_website_color"
 };

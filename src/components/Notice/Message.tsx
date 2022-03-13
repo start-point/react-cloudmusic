@@ -1,10 +1,10 @@
-import React, { useState, useImperativeHandle } from 'react';
-import classNames from 'classnames';
-import ReactDOM from 'react-dom';
-import { PROJECT_NAME } from '@/config/constance';
-import Notice, { NoticeType } from './Notice';
-import './message.less';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, { useState, useImperativeHandle } from "react";
+import classNames from "classnames";
+import ReactDOM from "react-dom";
+import { PROJECT_NAME } from "@/config/constance";
+import Notice, { NoticeType } from "./Notice";
+import "./message.less";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export interface IMessageState {
   type: NoticeType;
@@ -100,7 +100,7 @@ const MessageQueueComponent = React.forwardRef(MessageQueue);
 function newInstance(props: IMessageQueueProps) {
   const MessageQueueRef = React.createRef<IMessageQueueState>();
 
-  const div = document.createElement('div');
+  const div = document.createElement("div");
   document.body.appendChild(div);
   ReactDOM.render(<MessageQueueComponent {...props} ref={MessageQueueRef} />, div);
   const destroy = () => {

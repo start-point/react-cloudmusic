@@ -1,4 +1,4 @@
-export const musicBaseUrl = '//localhost:3000';
+export const musicBaseUrl = "//localhost:3000";
 export const Api = {
   MUSIC: {
     /**

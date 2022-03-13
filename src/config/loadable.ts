@@ -1,11 +1,11 @@
-import Loadable from 'react-loadable';
-import Loading from '@/components/Loading';
+import Loadable from "react-loadable";
+import Loading from "@/components/Loading";
 
 /**
  * 个性推荐/发现页面
  */
 export const Home = Loadable({
-  loader: () => import('@/pages/Home'),
+  loader: () => import("@/pages/Home"),
   loading: Loading
 });
 
@@ -13,7 +13,7 @@ export const Home = Loadable({
  * 专属定制
  */
 export const Order = Loadable({
-  loader: () => import('@/pages/Order'),
+  loader: () => import("@/pages/Order"),
   loading: Loading
 });
 
@@ -21,7 +21,7 @@ export const Order = Loadable({
  * 全局组件 顶部导航栏/侧边导航栏
  */
 export const Nav = Loadable({
-  loader: () => import('@/components/Nav'),
+  loader: () => import("@/components/Nav"),
   loading: Loading
 });
 
@@ -30,6 +30,6 @@ export const Nav = Loadable({
  */
 
 export const Blog = Loadable({
-  loader: () => import('@/pages/Blog'),
+  loader: () => import("@/pages/Blog"),
   loading: Loading
 });
