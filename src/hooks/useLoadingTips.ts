@@ -8,6 +8,7 @@ interface IuseLoadingTips {
   text: string;
 
   /** 显示LoadingTips 可以设置文字 可选 */
+  // eslint-disable-next-line no-unused-vars
   showLoading: (text?: string) => void;
 
   /** 关闭 */
@@ -26,11 +27,14 @@ export const useLoadingTips = (
   const [loadingText, setLoadingText] = useState(text);
 
   function showLoading(text?: string) {
+    // eslint-disable-next-line no-unused-vars
     setLoading((_loading) => (_loading = true));
+    // eslint-disable-next-line no-unused-vars
     text && setLoadingText((_loadingText) => (_loadingText = text));
   }
 
   function hideLoading() {
+    // eslint-disable-next-line no-unused-vars
     setLoading((__loading) => (__loading = false));
   }
 

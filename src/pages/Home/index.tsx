@@ -6,6 +6,7 @@ import { SlideShow } from "@/components/SlideShow";
 import { PROJECT_NAME } from "@/config/constance";
 import { getSheetLists } from "@/server";
 
+import NewMusicList from "./newMusicList";
 import RecommendList from "./recommendList";
 
 /**
@@ -33,7 +34,7 @@ const Home = observer(() => {
     <div className={classString}>
       <SlideShow bannerList={bannerList} />
       <RecommendList />
-      <div className="asfsafsa" />
+      <NewMusicList />
     </div>
   );
 });

@@ -11,7 +11,7 @@ import { Http } from "@/utils/fetch";
  * @param props
  * @returns
  */
-const RecommendList = (props) => {
+const RecommendList = () => {
   const [personalized, setPersonalized] = useState<any[]>();
   const loadingTips = useLoadingTips(false, "歌单加载中...");
   useEffect(() => {

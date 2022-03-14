@@ -1,8 +1,30 @@
 import { Api } from "@/api";
 import { Http } from "@/utils/fetch";
-// 歌单信息
+
+/**
+ * 轮播图
+ * @returns
+ */
 export const getSheetLists = async () => {
   const data = await Http.get(Api.MUSIC.MUSIC_BANNER);
+  return data;
+};
+
+/**
+ * 推荐歌单
+ * @returns
+ */
+export const getPersonalozed = async () => {
+  const data = await Http.get(Api.MUSIC.MUSIC_PERSONALIZED);
+  return data;
+};
+
+/**
+ * 推荐新音乐
+ * @returns
+ */
+export const getPersonalizedNewsong = async ({ limit }: { limit: number }) => {
+  const data = await Http.get(Api.MUSIC.MUSIC_PERSONALIZED_NEWSONG, { limit });
   return data;
 };
 

@@ -1,0 +1,38 @@
+.liziyuan-newmusic-list {
+  margin-top: 70px;
+
+  .liziyuan-newmusic-list-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .liziyuan-newmusic-list-wrap {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      height: 100px;
+      width: 28%;
+      .music-list-img {
+        height: 100%;
+        width: 40%;
+        .img-pic {
+          padding: 15%;
+          .img-url {
+            border-radius: @radius-card;
+          }
+        }
+      }
+      .music-list-text {
+        padding: 0 0 0 15px;
+        font-size: 14px;
+        width: 100%;
+        p:nth-child(1) {
+          font-weight: 600;
+        }
+      }
+      &:hover {
+        background: rgb(245, 245, 245);
+      }
+    }
+  }
+}

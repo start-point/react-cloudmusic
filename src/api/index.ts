@@ -9,6 +9,11 @@ export const Api = {
     /**
      * 推荐歌单搜索
      */
-    MUSIC_PERSONALIZED: `${musicBaseUrl}/personalized`
+    MUSIC_PERSONALIZED: `${musicBaseUrl}/personalized`,
+
+    /**
+     * 推荐新音乐
+     */
+    MUSIC_PERSONALIZED_NEWSONG: `${musicBaseUrl}/personalized/newsong`
   }
 };
