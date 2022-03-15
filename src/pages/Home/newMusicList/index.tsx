@@ -3,15 +3,17 @@ import "./newmusiclist.less";
 import React, { useEffect, useState } from "react";
 
 import { getPersonalizedNewsong } from "@/server";
+
 const NewMusicList = () => {
   const [musicList, setMusicList] = useState<any[]>();
 
   useEffect(() => {
     const func = async () => {
-      const data = await getPersonalizedNewsong({
+      const data: any = await getPersonalizedNewsong({
         limit: 12
       });
       if (data.code === 200) {
+        console.log(123);
         setMusicList(data.result);
       }
     };

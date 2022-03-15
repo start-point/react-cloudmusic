@@ -37,6 +37,7 @@
     "@types/react-transition-group": "^2.9.2",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
+    "@webpack-cli/serve": "^1.6.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.5",
     "babel-polyfill": "^6.26.0",
@@ -69,8 +70,8 @@
     "typescript": "^3.2.4",
     "url-loader": "^1.0.1",
     "webpack": "^5.70.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": ">=3.1.11",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
